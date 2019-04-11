@@ -111,7 +111,7 @@ This codebase provides a convolutional neural network (CNN) for DCASE 2019 chall
 
 ## Citation
 
-**If this codebase is helpful, then feel free to cite the following paper:**
+**If this codebase is helpful, please feel free to cite the following paper:**
 
 **[1] Qiuqiang Kong, Yin Cao, Turab Iqbal, Yong Xu, Wenwu Wang, Mark D. Plumbley. Cross-task learning for audio tagging, sound event detection and spatial localization: DCASE 2019 baseline systems. arXiv preprint arXiv:1904.03476 (2019).**
 
