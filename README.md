@@ -90,11 +90,11 @@ Model saved to /vol/vssp/msos/qk/workspaces/dcase2019_task2/checkpoints/main/log
 </pre>
 
 
-**Results
+**Results of different CNN architectures**
 
 We trained on both curated and noisy data of fold 2, 3, and 4. The following table shows the label-weighted label-ranking average precision (lwlrap) on fold 1 of curated data (1243 audio recordings) and noisy data (4157 recordings), respectively. 
 
-<img src="appendixes/result_table.png" width="400">
+<img src="appendixes/result_table.png" width="250">
 
 The above table shows that CNN-II, which is a 9-layer CNN with 2x2 average pooling achieves better performance than other architectures. 
 
