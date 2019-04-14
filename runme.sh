@@ -15,8 +15,8 @@ MODEL_TYPE='Cnn_9layers_AvgPooling'
 BATCH_SIZE=32
 
 # Create cross validation files
-python utils/create_cross_validation_file.py --dataset_dir=$DATASET_DIR --workspace=$WORKSPACE --data_type='train_curated'
-python utils/create_cross_validation_file.py --dataset_dir=$DATASET_DIR --workspace=$WORKSPACE --data_type='train_noisy'
+python utils/create_cross_validation_files.py --dataset_dir=$DATASET_DIR --workspace=$WORKSPACE --data_type='train_curated'
+python utils/create_cross_validation_files.py --dataset_dir=$DATASET_DIR --workspace=$WORKSPACE --data_type='train_noisy'
 
 # Calculate feature
 python utils/features.py calculate_feature_for_all_audio_files --dataset_dir=$DATASET_DIR --workspace=$WORKSPACE --data_type='train_curated' --mini_data
