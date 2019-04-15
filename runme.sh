@@ -34,7 +34,8 @@ CUDA_VISIBLE_DEVICES=$GPU_ID python pytorch/main.py train --dataset_dir=$DATASET
 CUDA_VISIBLE_DEVICES=$GPU_ID python pytorch/main.py inference_validation --dataset_dir=$DATASET_DIR --workspace=$WORKSPACE --train_source='curated_and_noisy' --segment_seconds=$SEGMENT_SECONDS --hop_seconds=$HOP_SECONDS --pad_type=$PAD_TYPE --holdout_fold=$HOLDOUT_FOLD --model_type='Cnn_9layers_AvgPooling' --iteration=20000 --batch_size=$BATCH_SIZE --cuda
 
 # Plot statistics
-python utils/plot_results.py --workspace=$WORKSPACE --source=curated_and_noisy --segment_seconds=$SEGMENT_SECONDS --hop_seconds=$HOP_SECONDS --pad_type=$PAD_TYPE
+python utils/plot_results.py --workspace=$WORKSPACE --train_source=curated_and_noisy --segment_seconds=$SEGMENT_SECONDS --hop_seconds=$HOP_SECONDS --pad_type=$PAD_TYPE
+
 
 ############ Train on full development dataset ############
 # Train
@@ -42,3 +43,5 @@ CUDA_VISIBLE_DEVICES=3 python pytorch/main.py train --dataset_dir=$DATASET_DIR -
 
 # Inference on test data and write out submission
 CUDA_VISIBLE_DEVICES=$GPU_ID python pytorch/main.py inference_test --dataset_dir=$DATASET_DIR --workspace=$WORKSPACE --train_source='curated_and_noisy' --segment_seconds=$SEGMENT_SECONDS --hop_seconds=$HOP_SECONDS --pad_type=$PAD_TYPE --model_type='Cnn_9layers_AvgPooling' --iteration=20000 --batch_size=$BATCH_SIZE --cuda
+
+############ END ############

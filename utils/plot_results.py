@@ -11,7 +11,7 @@ def plot_results(args):
 
     # Arugments & parameters
     workspace = args.workspace
-    train_source = args.source
+    train_source = args.train_source
     segment_seconds = args.segment_seconds
     hop_seconds = args.hop_seconds
     pad_type = args.pad_type
@@ -107,7 +107,7 @@ def plot_results(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--workspace', type=str, required=True, help='Directory of your workspace.')
-    parser.add_argument('--source', type=str, choices=['curated', 'noisy', 'curated_and_noisy'], required=True)
+    parser.add_argument('--train_source', type=str, choices=['curated', 'noisy', 'curated_and_noisy'], required=True)
     parser.add_argument('--segment_seconds', type=float, required=True, help='Segment duration for training.')
     parser.add_argument('--hop_seconds', type=float, required=True, help='Hop duration between segments.')
     parser.add_argument('--pad_type', type=str, choices=['constant', 'repeat'], required=True, help='Pad short audio recordings with constant silence or repetition.')
