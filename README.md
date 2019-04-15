@@ -15,6 +15,8 @@ The log mel spectrogram of sound classes from curated training data looks like:
 
 <img src="appendixes/curated_logmel.png">
 
+The log mel spectrogram of noisy data can be viewed here: <appendixes/noisy_logmel.png>
+
 ## Run the code
 
 **0. Prepare data** 
